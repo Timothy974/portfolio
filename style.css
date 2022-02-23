@@ -1,20 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap");
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   list-style-type: none;
-   text-decoration: none;
-   font-size: 20px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 body {
-   background: rgb(46, 11, 56);
-   font-family: 'Roboto', sans-serif;
-  }
-
-h1, h2, h3 {
-   font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#about .welcome {
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
