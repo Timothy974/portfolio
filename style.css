@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap");
+.boxCornerCut, nav::before, .presentation .firstPart::before,
+.presentation .secondPart::before, .languages::before,
+.learning::before, .project::before {
+  content: '';
+  border-bottom: 30px solid white;
+  border-left: 30px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.titleSection, #skills h1, #projects h1 {
+  margin: 2rem;
+  font-size: 3.5rem;
+  border-bottom: 5px solid black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +30,38 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+nav {
+  height: 4rem;
+  width: 100%;
+  background-color: #FCED0A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+nav a {
+  margin-right: 1rem;
+  padding-right: 1rem;
+  color: black;
+  font-size: 1.5rem;
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -28,6 +76,183 @@ h1, h2, h3 {
 }
 
 #about .welcome {
+  height: 40vh;
+  position: relative;
+}
+
+#about .welcome h1 {
+  font-size: 4rem;
+  position: absolute;
+  top: 5rem;
+  left: 7rem;
+}
+
+#about .welcome h2 {
+  font-size: 2rem;
+  position: absolute;
+  top: 10rem;
+  left: 12rem;
+}
+
+.presentation .firstPart,
+.presentation .secondPart {
+  width: 70%;
+  background-color: #FCED0A;
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem;
+  line-height: 1.3rem;
+}
+
+#skills {
+  margin-bottom: 2rem;
+}
+
+#skills .skillsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.languages,
+.learning {
+  width: 40%;
+  padding: 1rem;
+  background-color: #FCED0A;
+  position: relative;
+}
+
+.languages h2,
+.learning h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.languages .languageIcons,
+.learning .languageIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 2rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.languages .languageIcons i,
+.learning .languageIcons i {
+  font-size: 4rem;
+}
+
+.project {
+  width: 40%;
+  background-color: #FCED0A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  margin: 2rem;
+  position: relative;
+}
+
+.project p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project img {
+  width: 100%;
+  margin: 2rem;
+  -webkit-box-shadow: 4px 0 4px 2px rgba(17, 15, 15, 0.445);
+          box-shadow: 4px 0 4px 2px rgba(17, 15, 15, 0.445);
+}
+
+.project .tag {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project .tag span {
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  -webkit-box-shadow: 4px 0 4px 2px rgba(17, 15, 15, 0.445);
+          box-shadow: 4px 0 4px 2px rgba(17, 15, 15, 0.445);
+  border-radius: 10px;
+}
+
+.projectCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#contactMe {
+  height: 30vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+#contactMe form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4rem;
+  padding: 0 2rem;
+  background-color: #FCED0A;
+}
+
+footer span {
+  margin: 0 1rem 0 0.3rem;
+}
+
+.socialMedia i {
+  font-size: 2rem;
+  color: black;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

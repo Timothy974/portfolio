@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
 
+$yellowColor: #FCED0A;
+
+@mixin absoluteEl ($top, $right, $bottom, $left) {
+   position: absolute;
+   top: $top;
+   left: $left;
+}
+
+.boxCornerCut {
+   content: '';
+   border-bottom: 30px solid white;
+   border-left: 30px solid transparent;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+
+.titleSection {
+   margin: 2rem;
+   font-size: 3.5rem;
+   border-bottom: 5px solid black;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -11,16 +34,208 @@
 
 body {
    font-family: 'Roboto', sans-serif;
-  }
+}
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
    font-family: 'Orbitron', sans-serif;
+   font-size: 1.5rem;
+}
+
+a {
+   cursor: pointer;
+}
+
+nav {
+   height: 4rem;
+   width: 100%;
+   background-color: $yellowColor;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   position: relative;
+
+   &::before {
+      @extend .boxCornerCut;
+   }
+
+   a {
+      margin-right: 1rem;
+      padding-right: 1rem;
+      color: black;
+      font-size: 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+   }
 }
 
 #about {
    display: flex;
    flex-direction: column;
-      .welcome {
-         margin-top: 2rem;
+
+   .welcome {
+      height: 40vh;
+      position: relative;
+
+      h1 {
+         font-size: 4rem;
+         @include absoluteEl(5rem, 0, 0, 7rem);
       }
+
+      h2 {
+         font-size: 2rem;
+         @include absoluteEl(10rem, 0, 0, 12rem);
+      }
+   }
+}
+
+.presentation {
+
+   .firstPart,
+   .secondPart {
+      width: 70%;
+      background-color: $yellowColor;
+      position: relative;
+      margin: 2rem 0;
+      padding: 1rem;
+      line-height: 1.3rem;
+
+      &::before {
+         @extend .boxCornerCut;
+      }
+   }
+
+}
+
+#skills {
+   margin-bottom: 2rem;
+
+   h1 {
+      @extend .titleSection;
+   }
+
+   .skillsBox {
+      display: flex;
+      justify-content: space-around;
+   }
+
+
+}
+
+.languages,
+.learning {
+   width: 40%;
+   padding: 1rem;
+   background-color: $yellowColor;
+   position: relative;
+
+   &::before {
+      @extend .boxCornerCut;
+   }
+
+   h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+   }
+
+   .languageIcons {
+      display: flex;
+      margin-top: 2rem;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      i {
+         font-size: 4rem;
+      }
+   }
+
+}
+
+#projects {
+   h1 {
+      @extend .titleSection;
+   }
+}
+
+.project {
+   width: 40%;
+   background-color: $yellowColor;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 2rem;
+   margin: 2rem;
+   position: relative;
+
+   p {
+      text-align: center;
+      margin-bottom: 2rem;
+   }
+
+   img {
+      width: 100%;
+      margin: 2rem;
+      box-shadow: 4px 0 4px 2px rgba(17, 15, 15, 0.445);
+   }
+
+   .tag {
+      margin-bottom: 2rem;
+      display: flex;
+
+      span {
+         border: 1px solid black;
+         margin: 0.5rem;
+         padding: 0.5rem;
+         background-color: black;
+         color: white;
+         box-shadow: 4px 0 4px 2px rgba(17, 15, 15, 0.445);
+         border-radius: 10px;
+      }
+   }
+
+   &::before {
+      @extend .boxCornerCut;
+   }
+}
+
+.projectCards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+#contactMe {
+   height: 30vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   background-color: rgba(0, 0, 0, 0.815);
+
+   form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+   }
+}
+
+footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 4rem;
+   padding: 0 2rem;
+   background-color: $yellowColor;
+
+   span {
+      margin: 0 1rem 0 0.3rem;
+   }
+}
+
+.socialMedia {
+   i {
+      font-size: 2rem;
+      color: black;
+      margin-left: 1rem;
+   }
 }
