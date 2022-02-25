@@ -3,17 +3,17 @@
 .presentation .secondPart::before, .languages::before,
 .learning::before, .project::before {
   content: '';
-  border-bottom: 30px solid white;
+  border-bottom: 30px solid #161111;
   border-left: 30px solid transparent;
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.titleSection, #skills h1, #projects h1 {
+.titleSection, h1 {
   margin: 2rem;
   font-size: 3.5rem;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid whitesmoke;
 }
 
 * {
@@ -28,17 +28,22 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #161111;
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
 }
 
 a {
   cursor: pointer;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: whitesmoke;
 }
 
 nav {
@@ -77,11 +82,14 @@ nav a {
 
 #about .welcome {
   height: 40vh;
+  margin: 5rem 0 2rem 0;
   position: relative;
 }
 
 #about .welcome h1 {
   font-size: 4rem;
+  border-bottom: none;
+  margin: 0;
   position: absolute;
   top: 5rem;
   left: 7rem;
@@ -89,6 +97,7 @@ nav a {
 
 #about .welcome h2 {
   font-size: 2rem;
+  color: whitesmoke;
   position: absolute;
   top: 10rem;
   left: 12rem;
@@ -102,6 +111,11 @@ nav a {
   margin: 2rem 0;
   padding: 1rem;
   line-height: 1.3rem;
+}
+
+.presentation .firstPart h2,
+.presentation .secondPart h2 {
+  margin-bottom: 1.5rem;
 }
 
 #skills {
@@ -118,7 +132,7 @@ nav a {
 
 .languages,
 .learning {
-  width: 40%;
+  width: 30%;
   padding: 1rem;
   background-color: #FCED0A;
   position: relative;
@@ -145,6 +159,7 @@ nav a {
 .languages .languageIcons i,
 .learning .languageIcons i {
   font-size: 4rem;
+  margin: 1.5rem;
 }
 
 .project {
@@ -206,18 +221,21 @@ nav a {
 }
 
 #contactMe {
-  height: 30vh;
   width: 100%;
+  background-color: rgba(49, 38, 38, 0.712);
+  padding-bottom: 2rem;
+}
+
+#contactMe .contactForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 0, 0, 0.815);
 }
 
-#contactMe form {
+.formGroupe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,10 +243,55 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50%;
+  position: relative;
+  width: 20rem;
+  margin: 1.5rem;
+}
+
+.formGroupe label {
+  position: absolute;
+  top: -0.2rem;
+  left: 0;
+  color: whitesmoke;
+}
+
+.formGroupe input {
+  margin-bottom: 1rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid whitesmoke;
+  color: whitesmoke;
+  cursor: text;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.formGroupe input:focus {
+  outline: none;
+  border-bottom: 2px solid #FCED0A;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+
+.formGroupe textarea {
+  background-color: rgba(49, 38, 38, 0.712);
+  border: 2px solid whitesmoke;
+  min-height: 5rem;
+  color: whitesmoke;
+  font-family: inherit;
+  cursor: text;
+}
+
+.formGroupe textarea:focus {
+  outline: none;
+  border: 2px solid #FCED0A;
+}
+
+.formGroupe button {
+  margin-top: 2rem;
+  width: 10rem;
+  min-height: 3rem;
+  cursor: pointer;
 }
 
 footer {
